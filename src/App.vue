@@ -14,7 +14,7 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import PlayerModal from './components/PlayerModal.vue';
-import PlayIcon from "@/assets/Icons/PlayIcon.vue";
+import PlayIcon from "/public/Icons/PlayIcon.vue";
 
 const playerModal = ref(null);
 

@@ -53,7 +53,7 @@
           class="video-button"
           @click="increaseSize"
           title="Увеличить экран">
-        <ExpandIcon />
+        <CompressIcon />
       </a-button>
 
       <a-button
@@ -62,7 +62,7 @@
           class="video-button"
           @click="decreaseSize"
           title="Уменьшить экран">
-        <CompressIcon />
+        <ExpandIcon />
       </a-button>
 
       <a-button
@@ -93,14 +93,14 @@ import { ref } from 'vue';
 import { useMachine } from '@xstate/vue';
 import { videoPlayerMachine } from '../machines/videoPlayerMachine.ts';
 import VideoPlayer from "./VideoPlayer.vue";
-import PlayIcon from "@/assets/Icons/PlayIcon.vue";
-import PauseIcon from "@/assets/Icons/PauseIcon.vue";
-import ExpandIcon from "@/assets/Icons/ExpandIcon.vue";
-import CompressIcon from "@/assets/Icons/CompressIcon.vue";
-import CollapseIcon from "@/assets/Icons/CollapseIcon.vue";
-import ReplayIcon from "@/assets/Icons/ReplayIcon.vue";
-import SkipBackIcon from "@/assets/Icons/SkipBackIcon.vue";
-import SkipForwardIcon from "@/assets/Icons/SkipForwardIcon.vue";
+import PlayIcon from "~/Icons/PlayIcon.vue";
+import PauseIcon from "~/Icons/PauseIcon.vue";
+import ExpandIcon from "~/Icons/ExpandIcon.vue";
+import CompressIcon from "~/Icons/CompressIcon.vue";
+import CollapseIcon from "~/Icons/CollapseIcon.vue";
+import ReplayIcon from "~/Icons/ReplayIcon.vue";
+import SkipBackIcon from "~/Icons/SkipBackIcon.vue";
+import SkipForwardIcon from "~/Icons/SkipForwardIcon.vue";
 
 const { snapshot, send } = useMachine(videoPlayerMachine);
 const isVisible = ref(false);
@@ -177,6 +177,9 @@ defineExpose({
 
       &:hover {
         background-color: var(--btn-hover);
+      }
+      &:active {
+        scale: 0.7;
       }
 
       &:focus {
