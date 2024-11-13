@@ -1,0 +1,31 @@
+{
+  "name": "video-player-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@videojs/http-streaming": "^3.15.0",
+    "@xstate/vue": "^4.0.0",
+    "ant-design-vue": "^4.2.6",
+    "hls.js": "^1.5.17",
+    "normalize.css": "^8.0.1",
+    "path": "^0.12.7",
+    "pinia": "^2.2.6",
+    "video.js": "^8.19.1",
+    "vue": "^3.5.12",
+    "xstate": "^5.19.0"
+  },
+  "devDependencies": {
+    "@types/video.js": "^7.3.58",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "sass-embedded": "^1.80.6",
+    "typescript": "~5.6.2",
+    "vite": "^5.4.10",
+    "vue-tsc": "^2.1.8"
+  }
+}
